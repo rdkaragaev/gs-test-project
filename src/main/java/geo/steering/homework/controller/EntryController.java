@@ -26,7 +26,6 @@ public class EntryController {
                           @RequestParam(value = "q") String jsonKey,
                           @RequestParam(required = false, defaultValue = "false") Boolean distinct)
   {
-    
     var entries = entryService.getByJsonKey(jsonKey, distinct, pageable);
     
     model.addAttribute("jsonKey", jsonKey);
