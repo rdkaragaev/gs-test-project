@@ -23,7 +23,7 @@ public class EntryController {
   @GetMapping("/entry")
   public String getResult(Model model,
                           Pageable pageable,
-                          @RequestParam(value = "q") String jsonKey,
+                          @RequestParam(value = "q", defaultValue = "") String jsonKey,
                           @RequestParam(required = false, defaultValue = "false") Boolean distinct)
   {
     var entries = entryService.getByJsonKey(jsonKey, distinct, pageable);
