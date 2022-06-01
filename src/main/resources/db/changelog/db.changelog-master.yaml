@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/v-0.0.1/drop-entry-data-if-exists.sql
+  - include:
+      file: db/changelog/v-0.0.2/create-entry-data-table.sql
