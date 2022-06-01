@@ -28,7 +28,6 @@ public class EntryController {
   {
     var entries = entryService.getByJsonKey(jsonKey, distinct, pageable);
     
-    
     model.addAttribute("jsonKey", jsonKey);
     model.addAttribute("entries", entries);
     
